@@ -1,0 +1,28 @@
+.card {
+  background: linear-gradient(violet, white);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  height: 85vh;
+}
+
+.card-title {
+  font-size: 2em;
+  transition: 2s all ease;
+  opacity: 0;
+  will-change: opacity;
+}
+
+.card-body {
+  font-size: 2.5em;
+  font-weight: bolder;
+  transition: 3s all ease;
+  opacity: 0;
+  will-change: opacity;
+}
+
+.show {
+  opacity: 1;
+}

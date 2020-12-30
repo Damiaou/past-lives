@@ -1,0 +1,30 @@
+.title-container {
+  font-size: 2em;
+  height: 3em;
+  width: 100%;
+  background-color: violet;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 5px 7px #888888;
+}
+
+.home-button-transition {
+  animation: home-button-transition 4s ease-in 200ms 1;
+  flex: 1;
+}
+
+@keyframes home-button-transition {
+  0% {
+    flex: 0;
+  }
+  100% {
+    flex: 1;
+  }
+}
+
+.title {
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+}

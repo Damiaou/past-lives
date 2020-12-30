@@ -1,0 +1,15 @@
+.discover-button {
+  background-color: violet;
+  font-size: 1.7em;
+  color: white;
+  font-weight: 400;
+  cursor: pointer;
+  text-align: center;
+  height: 200px;
+  width: 200px;
+  border-radius: 200px;
+  line-height: 45px;
+  display: table-cell;
+  vertical-align: middle;
+  box-shadow: 3px 3px 3px #888888;
+}
