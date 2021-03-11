@@ -28,8 +28,6 @@ export default function App() {
 		setLoading(false);
 	}, [discovered]);
 
-	console.log(discovered);
-
 	return (
 		<div className="main">
 			{discovered ? (
