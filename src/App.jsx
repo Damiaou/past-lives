@@ -6,9 +6,9 @@ import { getRandomAdjective, getRandomAnimal } from './utils/fetchingApis';
 import './styles.css';
 
 export default function App() {
-	const [discovered, setDiscovered] = useState(false);
 	const [animal, setAnimal] = useState('');
 	const [adjective, setAdjective] = useState('');
+	const [discovered, setDiscovered] = useState(false);
 	const [loading, setLoading] = useState(false);
 
 	const toggleDiscovered = () => {
@@ -16,6 +16,7 @@ export default function App() {
 	};
 
 	useEffect(() => {
+		console.log('Is discovered');
 		setLoading(true);
 		getRandomAnimal().then((animal) => {
 			setAnimal(animal);
@@ -26,24 +27,21 @@ export default function App() {
 
 		setLoading(false);
 	}, [discovered]);
-	// Does not include animals and adjective by choice infinite loop if you do.
 
-	const handleClick = () => {
-		toggleDiscovered();
-	};
+	console.log(discovered);
 
 	return (
 		<div className="main">
 			{discovered ? (
 				<>
-					<Header title="Remember" homeAction={handleClick} discovered={discovered} />
+					<Header title="Remember" homeAction={toggleDiscovered} discovered={discovered} />
 					<PastLive animal={animal} adjective={adjective} loading={loading} />
 				</>
 			) : (
 				<>
 					<Header title="Past Lives" />
 					<div className="discover-button-container">
-						<ButtonDiscover onClick={handleClick} />
+						<ButtonDiscover onClick={toggleDiscovered} />
 					</div>
 				</>
 			)}
