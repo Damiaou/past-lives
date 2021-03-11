@@ -6,11 +6,15 @@
 	font-weight: 400;
 	cursor: pointer;
 	text-align: center;
-	height: 200px;
-	width: 200px;
-	border-radius: 200px;
+	height: 220px;
+	width: 220px;
+	border-radius: 220px;
 	line-height: 45px;
 	display: table-cell;
 	vertical-align: middle;
-	box-shadow: 3px 3px 3px #888888;
+	transition: all 0.3s;
+}
+
+.discover-button:hover {
+	box-shadow: 3px 3px 1px rgba(215, 215, 215, 1);
 }

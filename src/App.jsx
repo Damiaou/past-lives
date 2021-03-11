@@ -16,7 +16,6 @@ export default function App() {
 	};
 
 	useEffect(() => {
-		console.log('Is discovered');
 		setLoading(true);
 		getRandomAnimal().then((animal) => {
 			setAnimal(animal);
